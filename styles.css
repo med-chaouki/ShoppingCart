@@ -1,0 +1,429 @@
+*{
+    /* font-family: Poppins, serif, system-ui; */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    position: relative;
+}
+
+header{
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    width: 100vw;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    top: 0;
+    box-shadow: -7px -2px 10px 6px rgba(165, 164, 164, 0.664);
+    background-color: white;
+}
+
+/* product quantity */
+
+#product-quantity{
+    color: #fff;
+    font-weight:700;
+    padding: 0;
+    margin: 0;  
+   }
+
+.product-quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 35px;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: #fb0017;
+    border-radius: 50%;
+}
+
+.fa-cart-shopping{
+    font-size:x-large;
+    font-weight: bold;
+}   
+
+.logo{
+    font-family: 'Lobster', cursive;
+    position: relative;
+}
+
+section{
+    width: 100%;
+    height: 80vh;
+    background: url(https://www.cultkits.com/cdn/shop/files/mex-98-site-home-banner-2.jpg?v=1693396873&width=1500) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+
+/* Styles for the popup container */
+.popup {
+    display: none;
+    position: fixed;
+    top: 65px;
+    right: 40px;
+    width: 370px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+@media (max-width: 380px)  {
+    .popup { 
+        right: 10px; 
+    }
+  }
+
+/* Styles for the popup content */
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    overflow-y: auto; /* This enables vertical scrolling */
+    max-height: 100%; /* Limit the maximum height for scrolling */  
+}
+
+#popup-content{
+    display: grid;
+    grid-template-columns: repeat(1, 89%);
+    gap: 5px;
+}
+
+.productCart{
+    display: flex; 
+    justify-content: space-around;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    width: 331px;
+    padding: 5px;
+}
+
+.productCart img{
+  width: 45px;
+  height: auto;
+  border-radius: 5px;
+}
+
+
+  
+
+/* Style for the close button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    color: #fb0017;
+}
+
+
+@keyframes typing {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 70%;
+    }
+  }
+
+#quantity{
+    display: inline-block;
+}
+
+  .quantity-style{
+    display: inline-block;
+    background-color: #fb0017;
+    width:  30px;
+    text-align: center;
+    color: #fff;
+    font-size: x-large;
+    border-radius: 50%;
+  }
+  
+  .typewriter-text {
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    overflow: hidden;
+    border-right: 1px solid #fb0017;
+    white-space: nowrap;
+    margin: 320px 200px auto 200px  ;
+    text-align: center;
+    letter-spacing: 2px;
+    animation: typing 7s steps(40, end) infinite;
+    color: #fb0017;
+    font-size: 3em ;
+    font-weight: 600;
+    padding: 30px;
+    text-shadow: 1px 1px 2px rgb(24, 23, 23), 0 0 1em rgb(13, 13, 14), 0 0 0.2em rgb(12, 12, 12);
+  }
+
+@media (max-width: 1250px)  {
+    .typewriter-text {
+    border-right:transparent;
+    text-align: initial;
+    overflow: hidden;
+    white-space: wrap;
+    margin: 250px ;
+    margin-left: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 3em ;
+    font-weight: 600;
+    padding: 30px;
+    animation:none;
+    }
+  }
+@media (max-width: 700px) {
+    .typewriter-text {
+        border-right:transparent;
+        text-align: initial;
+        overflow: hidden;
+        white-space: wrap;
+        margin: 150px ;
+        margin-left: 20px;
+        margin-right: 100px ;
+        text-align: center;
+        letter-spacing: 2px;
+        font-size: 2em ;
+        font-weight: 600;
+        padding: 30px;
+        animation:none;
+        }
+  }
+
+
+@keyframes ball {
+    0% { bottom: 30px;
+        left: 0;} 
+    5% {bottom: 0px;
+        left: 5%;}
+    10% {bottom: 30px;
+        left: 10%;} 
+    15% {bottom: 0px;
+        left: 15%;} 
+    20% {bottom: 30px;
+        left: 20%;}
+    25% {bottom: 0px;
+        left: 25%;}
+    30% {bottom: 30px;
+        left: 30%;} 
+    35% {bottom: 0px;
+        left: 35%;}
+    40% {bottom: 30px;
+        left: 40%;} 
+    45% {bottom: 0px;
+        left: 45%;}
+    50% {bottom: 30px;
+        left: 50%;}
+    55% {bottom: 0px;
+        left: 55%;}  
+    60% {bottom: 30px;
+        left: 60%;} 
+    65% {bottom: 0px;
+        left: 65%;}
+    70% {bottom: 30px;
+        left: 70%;}
+    75% {bottom: 0px;
+        left: 75%;} 
+    80% {bottom: 30px;
+        left: 80%;} 
+    85% {bottom: 0px;
+        left: 85%;}
+    90% {bottom: 30px;
+        left: 90%;} 
+    95% {bottom: 0px;
+        left: 95%;}
+    100% {bottom: 30px;
+        left: 100%;}
+  }
+
+.fa-futbol{
+    color: #2b4a53;
+    color: #000000;
+    position: fixed;
+    bottom: 20px;
+    left: 0px;
+    animation: ball 17s  infinite;
+    font-size: xx-large;
+    background-color: #fff;
+    background-color: #fb0017;
+    border-radius: 50%;
+}  
+
+
+main{
+    margin-top: 120px;
+}
+
+.product{
+    position: relative;
+    height: 650px;
+}
+
+.product:hover {
+    transform: scale(.999);
+}
+
+#product-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 25vw);
+    margin: 0 12.5vw 0 12.5vw;
+    gap: 10px;
+}
+
+
+
+.product img{
+    width: 100%;
+    height: 75%;
+}
+
+
+
+@media (max-width: 1115px) {
+    .product img{
+        width: 100%;
+        height: 70%;
+    }
+}
+
+@media (max-width: 1045px) {
+    .product img{
+        width: 100%;
+        height: 65%;
+    }
+}
+
+@media (max-width: 800px) {
+
+    #product-container {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 37vw);
+        margin: 0 12.5vw 0 12.5vw;
+        gap: 10px;
+    }
+    
+    .product img{
+        width: 100%;
+        height: 65%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #product-container {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(1, 70vw);
+        margin: 0 12.5vw 0 12.5vw;
+        gap: 10px;
+    }
+    
+    .product img{
+        width: 100%;
+        height: 75%;
+    }
+}
+
+@media (max-width: 400px) {
+
+    #product-container {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(1, 70vw);
+        margin: 0 12.5vw 0 12.5vw;
+        gap: 10px;
+    }
+    
+    .product img{
+        width: 100%;
+        height: 65%;
+    }
+}
+
+.fa-heart{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.red-heart, .favorite{
+    color: #fb0017;
+}
+
+.not-favorite{
+    color: #000000;
+}
+
+
+.product button{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #fb0017;
+    background-color: #fff;
+    font-size: medium;
+    font-weight: 600;
+}
+
+.product button:hover{
+    background: radial-gradient(ellipse at center, #fff, #fb0017 );
+}
+
+/*#b3b4b1*/
+
+.quantity-container h3 {
+    display: inline-block;
+}
+
+.quantity-button {
+    display: inline-block;
+    margin: 5px;
+    display: inline-block;
+    background-color: transparent; 
+    width:  25px;
+    text-align: center;
+    color: #fb0017;
+    border:none;
+} 
+
+#cart-total{
+    position: relative;
+    right: 0;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+}
+
+.fa-trash{
+    margin-top: 60px;
+    margin-left: 75px;
+}
+
+.producteList{
+    text-align: start;
+    margin-left: 10px;
+}
